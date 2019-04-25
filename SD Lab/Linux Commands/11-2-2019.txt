@@ -1,0 +1,72 @@
+student@T20:~$ man cp
+student@T20:~$ man cp
+student@T20:~$ cd ajce
+student@T20:~/ajce$ cp f1.txt f2.txt
+student@T20:~/ajce$ ls
+f1.txt  f2.txt  f3.txt  intmca  lmca  rmca
+student@T20:~/ajce$ cat f1.txt
+hkhj.lhj
+student@T20:~/ajce$ cat f2.txt
+hkhj.lhj
+student@T20:~/ajce$ cp f3.txt f1.txt f3.txt
+cp: target 'f3.txt' is not a directory
+student@T20:~/ajce$ cp f3.txt f1.txt f2.txt
+cp: target 'f2.txt' is not a directory
+student@T20:~/ajce$ cp f1.txt f2.txt rmca
+student@T20:~/ajce$ ls
+f1.txt  f2.txt  f3.txt  intmca  lmca  rmca
+student@T20:~/ajce$ cd rmca
+student@T20:~/ajce/rmca$ ls
+f1.txt  f2.txt
+student@T20:~/ajce/rmca$ cp -b f3.txt f1.txt
+cp: cannot stat 'f3.txt': No such file or directory
+student@T20:~/ajce/rmca$ cp -b f1.txt f2.tx
+student@T20:~/ajce/rmca$ cp -b f1.txt f2.txt
+student@T20:~/ajce/rmca$ ls
+f1.txt  f2.tx  f2.txt  f2.txt~
+student@T20:~/ajce/rmca$ cd ..
+student@T20:~/ajce$ cp -i f1.txt f2.txt
+cp: overwrite 'f2.txt'? n
+student@T20:~/ajce$ man cp
+student@T20:~/ajce$ cp -n f1.txt f2.txt
+student@T20:~/ajce$ cat f1.txt
+hkhj.lhj
+student@T20:~/ajce$ cat f2.txt
+haii
+hello
+
+student@T20:~/ajce$ cp -T f1.txt f2.txt f3.txt
+cp: extra operand 'f3.txt'
+Try 'cp --help' for more information.
+student@T20:~/ajce$ cat > a.txt
+hoooii
+^C
+student@T20:~/ajce$ cp rmca lmca
+cp: -r not specified; omitting directory 'rmca'
+student@T20:~/ajce$ cp -r rmca lmca
+student@T20:~/ajce$ cd lmca
+student@T20:~/ajce/lmca$ ls
+rmca
+student@T20:~/ajce/lmca$ cd ..
+student@T20:~/ajce$ cp -r rmca lmca intmca
+student@T20:~/ajce$ cd intmca
+student@T20:~/ajce/intmca$ ls
+lmca  rmca
+student@T20:~/ajce/intmca$ cd ..
+student@T20:~/ajce$ cp -v f1.txt f2.txt
+'f1.txt' -> 'f2.txt'
+student@T20:~/ajce$ cp -u f3.txt f1.txt
+student@T20:~/ajce$ cat f3.txt
+sdgjhsnds
+ddshgdskj
+fgsdnn
+dnkd
+dnkdf
+student@T20:~/ajce$ cat f1.txt
+sdgjhsnds
+ddshgdskj
+fgsdnn
+dnkd
+dnkdf
+student@T20:~/ajce$ 
+

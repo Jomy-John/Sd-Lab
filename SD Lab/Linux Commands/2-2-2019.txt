@@ -1,0 +1,206 @@
+student@T20:~$ cd ajce
+student@T20:~/ajce$ cd mca
+student@T20:~/ajce/mca$ cd ~
+student@T20:~$ cd ajce
+student@T20:~/ajce$ cd mca
+student@T20:~/ajce/mca$ cat my file1.txt
+cat: my: No such file or directory
+cat: file1.txt: No such file or directory
+student@T20:~/ajce/mca$ cat f1.txt
+jomy
+student@T20:~/ajce/mca$ cat f1.txt > f2.txt
+student@T20:~/ajce/mca$ cat f1.txt
+jomy
+student@T20:~/ajce/mca$ cat > file1.txt
+hi
+hlo
+kooi
+^C
+student@T20:~/ajce/mca$ cat file1.txt
+hi
+hlo
+kooi
+student@T20:~/ajce/mca$ catcat f2.txt
+
+Command 'catcat' not found, did you mean:
+
+  command 'fatcat' from deb fatcat
+
+Try: apt install <deb name>
+
+student@T20:~/ajce/mca$ cat f2.txt
+jomy
+student@T20:~/ajce/mca$ cat f2.txt >> f1.txt
+student@T20:~/ajce/mca$ cat f1
+cat: f1: No such file or directory
+student@T20:~/ajce/mca$ cat f1.txt
+jomy
+john
+
+student@T20:~/ajce/mca$ cat f2.txt f1.txt
+john
+
+jomy
+john
+
+student@T20:~/ajce/mca$ cat f1.txt f2.txt > file.txt
+student@T20:~/ajce/mca$ cat file.txt
+jomy
+
+
+john
+
+student@T20:~/ajce/mca$ cat -n file.txt
+     1	jomy
+     2	
+     3	
+     4	john
+     5	
+student@T20:~/ajce/mca$ cat f1.txt; cat f2.txt; cat file1.txt 
+jomy
+
+
+john
+
+hi
+hlo
+kooi
+student@T20:~/ajce/mca$ man cat
+student@T20:~/ajce/mca$ cat f1.txt cat f2.txt cat file1.txt 
+jomy
+
+cat: cat: No such file or directory
+john
+cat: cat: No such file or directory
+hi
+hlo
+kooi
+student@T20:~/ajce/mca$ cat-s f1.txt 
+cat-s: command not found
+student@T20:~/ajce/mca$ cat -s f1.txt 
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+7
+8
+9
+10
+
+student@T20:~/ajce/mca$ tac f1.txt
+
+10
+9
+8
+7
+6
+
+5
+
+
+4
+
+
+3
+
+
+
+2
+
+
+1
+student@T20:~/ajce/mca$ cat -e f2
+cat: f2: No such file or directory
+student@T20:~/ajce/mca$ cat -e f2.txt
+john$
+student@T20:~/ajce/mca$ cat -v.txt
+cat: invalid option -- '.'
+Try 'cat --help' for more information.
+student@T20:~/ajce/mca$ cat -v f2.txt
+john
+student@T20:~/ajce/mca$ cat -t f2.txt
+john
+student@T20:~/ajce/mca$ mv f2.txt f1.txt
+student@T20:~/ajce/mca$ ls mca
+ls: cannot access 'mca': No such file or directory
+student@T20:~/ajce/mca$ ls cat f1.txt
+ls: cannot access 'cat': No such file or directory
+f1.txt
+student@T20:~/ajce/mca$ cat f1.txt
+john
+student@T20:~/ajce/mca$ cat f2.txt intmca
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+cat: intmca: Is a directory
+student@T20:~/ajce/mca$ mv f2.txt intmca
+student@T20:~/ajce/mca$ ls 
+31-1-2019.txt  file1.txt  intmca  myfile.txt  rmca
+f1.txt         file.txt   lemca   out.txt
+student@T20:~/ajce/mca$ cd intmca
+student@T20:~/ajce/mca/intmca$ ls
+f2.txt
+student@T20:~/ajce/mca/intmca$ mv f2.txt f1.txt
+student@T20:~/ajce/mca/intmca$ cat f1.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+student@T20:~/ajce/mca/intmca$ mv myfile.txt file1.txt f1.txt
+mv: target 'f1.txt' is not a directory
+student@T20:~/ajce/mca/intmca$ cd ..
+student@T20:~/ajce/mca$ mv myfile.txt file1.txt f1.txt
+mv: target 'f1.txt' is not a directory
+student@T20:~/ajce/mca$ mv myfile.txt rmca
+student@T20:~/ajce/mca$ cd rmca
+student@T20:~/ajce/mca/rmca$ ls
+myfile.txt
+student@T20:~/ajce/mca/rmca$ cd..
+cd..: command not found
+student@T20:~/ajce/mca/rmca$ mv myfile.txt mca
+student@T20:~/ajce/mca/rmca$ ls
+mca
+student@T20:~/ajce/mca/rmca$ cd ..
+student@T20:~/ajce/mca$ ls
+31-1-2019.txt  f1.txt  file1.txt  file.txt  intmca  lemca  out.txt  rmca
+student@T20:~/ajce/mca$ mv -n file.txt file1.txt
+student@T20:~/ajce/mca$ cat file1.txt
+hi
+hlo
+kooi
+student@T20:~/ajce/mca$ cat file.txt
+jomy
+john
+
+student@T20:~/ajce/mca$ cd rmca
+student@T20:~/ajce/mca/rmca$ mv -t mca mca
+mv: target 'mca' is not a directory
+student@T20:~/ajce/mca/rmca$ mv -t mca lemca
+mv: target 'mca' is not a directory
+student@T20:~/ajce/mca/rmca$ mv -t  lemca mca
+mv: failed to access 'lemca': No such file or directory
+student@T20:~/ajce/mca/rmca$ man mv
+student@T20:~/ajce/mca/rmca$ cd ..
+student@T20:~/ajce/mca$ mv *.txt rmca
+student@T20:~/ajce/mca$ 
+

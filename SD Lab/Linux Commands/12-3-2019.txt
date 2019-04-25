@@ -1,0 +1,113 @@
+student@T20:~$ expr 12+8
+12+8
+student@T20:~$ expr 12 + 8
+20
+student@T20:~$ expr 10 \* 2
+20
+student@T20:~$ a=5
+student@T20:~$ expr $a + 2
+7
+student@T20:~$ expr 10 \ 5
+expr: syntax error
+student@T20:~$ expr 10 / 5
+2
+student@T20:~$ expr 12 - 3
+9
+student@T20:~$ a=10
+student@T20:~$ b=5
+student@T20:~$ sum= `expr $a + $b`
+15: command not found
+student@T20:~$ echo "sum = $sum"
+sum = 
+student@T20:~$ sum = `expr $a + $b`
+sum: '=': No such file or directory
+sum: 15: No such file or directory
+student@T20:~$ read x
+6
+student@T20:~$ read y
+7
+student@T20:~$ sum=`expr $x + $y`
+student@T20:~$ echo "sum= $sum"
+sum= 13
+student@T20:~$ res=`expr $x = $y`
+student@T20:~$ echo $res
+0
+student@T20:~$ x=jomy
+student@T20:~$ len=`expr length $x `
+student@T20:~$ echo $len
+4
+student@T20:~$ a=11
+student@T20:~$ b=7
+student@T20:~$ res=`expr $x \< $y`
+student@T20:~$ echo $res
+0
+student@T20:~$ man expr
+student@T20:~$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+student@T20:~$ x=hello hai
+
+Command 'hai' not found, did you mean:
+
+  command 'hi' from snap hi (1.1)
+  command 'ohai' from deb ohai
+  command 'cai' from deb emboss
+  command 'fai' from deb fai-client
+
+See 'snap info <snapname>' for additional versions.
+
+student@T20:~$ x=monster
+student@T20:~$ sub=`expr $x 1 4`
+expr: syntax error
+student@T20:~$ sub=`expr substr $x 1 4`
+student@T20:~$ echo $sub
+mons
+student@T20:~$ 
+

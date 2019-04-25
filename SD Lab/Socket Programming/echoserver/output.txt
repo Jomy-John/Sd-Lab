@@ -1,0 +1,19 @@
+Server
+Server is running...
+connection establised
+server send echo to client 
+server send echo to client 
+server send echo to client
+Client
+ Enter text..
+ if client 'quit' type  exit
+hello
+Server said : hello
+Enter text 
+i am client
+Server said : i am client
+Enter text 
+hai
+Server said : hai
+Enter text 
+

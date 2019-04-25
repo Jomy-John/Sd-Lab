@@ -1,0 +1,129 @@
+student@T20:~$ cd ajce
+student@T20:~/ajce$ head f1.txt
+arun
+anto
+jibu
+bilal
+thomas
+anoop
+ousu
+johns
+stebin
+jithin
+student@T20:~/ajce$ head -n 5 f1.txt
+arun
+anto
+jibu
+bilal
+thomas
+student@T20:~/ajce$ head -c 7 f1.txt
+arun
+anstudent@T20:~/ajce$ head f1.txt b.txt
+==> f1.txt <==
+arun
+anto
+jibu
+bilal
+thomas
+anoop
+ousu
+johns
+stebin
+jithin
+
+==> b.txt <==
+Hyderabad
+Itanagar
+Dispur
+Patna
+Raipur
+Panaji
+Gandhinagar
+Chandigarh
+Shimla
+Srinagar
+student@T20:~/ajce$ head-q f1.txt b.txt
+head-q: command not found
+student@T20:~/ajce$ head -q f1.txt b.txt
+arun
+anto
+jibu
+bilal
+thomas
+anoop
+ousu
+johns
+stebin
+jithin
+Hyderabad
+Itanagar
+Dispur
+Patna
+Raipur
+Panaji
+Gandhinagar
+Chandigarh
+Shimla
+Srinagar
+student@T20:~/ajce$ haed -n 15 f1.txt |tail -n 6 f1.txt
+bastin
+tijo
+jophin
+vineeth
+vishnu
+
+
+Command 'haed' not found, did you mean:
+
+  command 'head' from deb coreutils
+
+Try: apt install <deb name>
+
+student@T20:~/ajce$ head -n 15 f1.txt |tail -n 6 f1.txt
+bastin
+tijo
+jophin
+vineeth
+vishnu
+
+student@T20:~/ajce$ head -n 15 f1.txt |tail -n 6 
+jithin
+tarun
+jerin
+alan
+alex
+bastin
+student@T20:~/ajce$ tail f1.txt
+alan
+alex
+bastin
+tijo
+jophin
+vineeth
+vishnu
+joe
+joel
+tony
+student@T20:~/ajce$ tail -n 3 f1.txt
+joe
+joel
+tony
+student@T20:~/ajce$ tail -n 3 f1.txt b.txt
+==> f1.txt <==
+joe
+joel
+tony
+
+==> b.txt <==
+Chandigarh
+Shimla
+Srinagar
+student@T20:~/ajce$ tail -q -n 3 f1.txt b.txt
+joe
+joel
+tony
+Chandigarh
+Shimla
+Srinagar
+student@T20:~/ajce$ 
+

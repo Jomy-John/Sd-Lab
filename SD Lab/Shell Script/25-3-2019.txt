@@ -1,0 +1,83 @@
+student@T20:~$ cd jomy
+student@T20:~/jomy$ gedit if.sh
+student@T20:~/jomy$ chmod +x if.sh
+student@T20:~/jomy$ ./if.sh
+enter a number:3
+./if.sh: line 3: [: 3-lt: unary operator expected
+./if.sh: line 6: [3: command not found
+Positive
+student@T20:~/jomy$ ./if.sh
+enter a number:4
+./if.sh: line 3: [: 4-lt: unary operator expected
+./if.sh: line 6: [: missing `]'
+Positive
+student@T20:~/jomy$ gedit if.sh
+^[[A^C
+student@T20:~/jomy$ ./if.sh
+enter a number:1
+./if.sh: line 3: [: 1-lt: unary operator expected
+./if.sh: line 6: [: missing `]'
+Positive
+student@T20:~/jomy$ gedit if.sh
+student@T20:~/jomy$ ./if.sh
+enter a number:4
+Positive
+student@T20:~/jomy$ gedit prgm.sh
+student@T20:~/jomy$ gedit prgm.sh
+student@T20:~/jomy$ chmod +x prgm.sh
+student@T20:~/jomy$ ./prgm.sh
+./prgm.sh: line 1: [: ==: unary operator expected
+./prgm.sh: line 4: [: ==: unary operator expected
+Typed argument is neither monday nor tuesday
+student@T20:~/jomy$ gedit prgm.sh
+student@T20:~/jomy$ ./prgm.sh
+./prgm.sh: line 1: [: -eq: unary operator expected
+./prgm.sh: line 4: [: -eq: unary operator expected
+Typed argument is neither monday nor tuesday
+student@T20:~/jomy$ gedit prgm.sh
+student@T20:~/jomy$ ./prgm.sh monday
+./prgm.sh: line 1: [: monday: integer expression expected
+./prgm.sh: line 4: [: monday: integer expression expected
+Typed argument is neither monday nor tuesday
+student@T20:~/jomy$ gedit prgm.sh
+student@T20:~/jomy$ ./prgm.sh monday
+The typed argument is monday
+student@T20:~/jomy$ ./prgm.sh tuesday
+The typed argument is tuesday
+student@T20:~/jomy$ ./prgm.sh sunday
+Typed argument is neither monday nor tuesday
+student@T20:~/jomy$ fr.sh
+fr.sh: command not found
+student@T20:~/jomy$ gedit fr.sh
+student@T20:~/jomy$ chmod +x fr.sh
+student@T20:~/jomy$ ./fr.sh
+ 3 times 5 is 15 
+ 2 times 5 is 10 
+ 5 times 5 is 25 
+ 7 times 5 is 35 
+student@T20:~/jomy$ gedit fr1.sh
+student@T20:~/jomy$ chmod +x fr1.sh
+student@T20:~/jomy$ ./fr1.sh
+ Welcome 1 times 
+ Welcome 2 times 
+ Welcome 3 times 
+ Welcome 4 times 
+ Welcome 5 times 
+student@T20:~/jomy$ gedit fr2.sh
+student@T20:~/jomy$ chmod +x fr2.sh
+student@T20:~/jomy$ ./fr2.sh
+ even numbers are 0 
+ even numbers are 2 
+ even numbers are 4 
+ even numbers are 6 
+ even numbers are 8 
+ even numbers are 10 
+student@T20:~/jomy$ gedit fr3.sh
+student@T20:~/jomy$ chmod +x fr3.sh
+student@T20:~/jomy$ ./fr3.sh
+ welcome 1 times 
+ welcome 2 times 
+ welcome 3 times 
+ welcome 4 times 
+ welcome 5 times 
+student@T20:~/jom

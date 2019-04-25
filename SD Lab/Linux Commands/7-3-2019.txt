@@ -1,0 +1,83 @@
+student@T20:~$ cd ajce
+student@T20:~/ajce$ grep "arun" f1.txt
+arun
+tarun
+student@T20:~/ajce$ grep -i "arun" f1.txt
+arun
+tarun
+student@T20:~/ajce$ grep 'arun|anto' f1.txt
+student@T20:~/ajce$ grep "arun" f1.txt fc.txt
+f1.txt:arun
+f1.txt:tarun
+student@T20:~/ajce$ grep -v "arun" f1.txt
+anto
+jibu
+bilal
+thomas
+anoop
+ousu
+johns
+stebin
+jithin
+jerin
+alan
+alex
+bastin
+tijo
+jophin
+vineeth
+vishnu
+joe
+joel
+tony
+abhijith
+alen
+student@T20:~/ajce$ grep -c "arun" f1.txt
+2
+student@T20:~/ajce$ grep -w "arun" f1.txt
+arun
+student@T20:~/ajce$ grep -w 'arun|anto' f1.txt
+student@T20:~/ajce$ man grep
+student@T20:~/ajce$ grep -n "arun" f1.txt
+1:arun
+11:tarun
+student@T20:~/ajce$ egrep -w 'arun|anto' f1.txt
+arun
+anto
+student@T20:~/ajce$ grep -l "ba" *
+21-2-2019.txt
+25-02-2019.txt
+b.txt
+f1.txt
+fc.txt
+grep: intmca: Is a directory
+grep: lmca: Is a directory
+ml5.odg
+grep: rmca: Is a directory
+student@T20:~/ajce$ grep "^Barcelona" fc.txt
+Barcelona and colloquially as Barça ([ˈbaɾsə]), is a professional football club based in Barcelona, Catalonia, Spain.
+Barcelona is one of the most widely supported teams in the world, and the club has one of the largest social media following in the world among sports teams.[9][10] Barcelona players have won a record number of Ballon d'Or awards (11), with recipients including Johan Cruyff, as well as a record number of FIFA World Player of the Year awards (7), with winners including Ronaldo, Romário, Ronaldinho, and Rivaldo. In 2010, three players who came through the club's youth academy (Lionel Messi, Andrés Iniesta, and Xavi) were chosen as the three best players in the world in the FIFA Ballon d'Or awards, an unprecedented feat for players from the same football school.
+Barcelona is one of three founding members of the Primera División that have never been relegated from the top division since its inception in 1929, along with Athletic Bilbao and Real Madrid. In 2009, Barcelona became the first Spanish club to win the continental treble consisting of La Liga, Copa del Rey, and the UEFA Champions League, and also became the first Spanish football club to win six out of six competitions in a single year, by also winning the Spanish Super Cup, UEFA Super Cup, and FIFA Club World Cup.[11] In 2011, the club became European champions again and won five trophies. This Barcelona team, which won 14 trophies in just 4 years under Pep Guardiola, is considered by some in the sport to be the greatest team of all time.[12][13][14] By winning their fifth Champions League trophy on 6 June 2015, Barcelona became the first European club in history to achieve the continental treble twice. The highest paid sports team in the world, in November 2018 Barcelona became the first sports team with average first-team pay in excess of £10m ($13.8m) per year.[15][16] 
+student@T20:~/ajce$ grep "Barcelona$" fc.txt
+student@T20:~/ajce$ grep "School$" fc.txt
+student@T20:~/ajce$ grep "school$" fc.txt
+student@T20:~/ajce$ grep "spain$" fc.txt
+student@T20:~/ajce$ grep -B2 "arun" f1.txt
+arun
+--
+stebin
+jithin
+tarun
+student@T20:~/ajce$ grep -A2 "arun" f1.txt
+arun
+anto
+jibu
+--
+tarun
+jerin
+alan
+student@T20:~/ajce$ grep "l$" f1.txt
+bilal
+joel
+
+

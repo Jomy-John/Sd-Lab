@@ -1,0 +1,104 @@
+student@T20:~$ cd jomy
+student@T20:~/jomy$ mkdir git
+student@T20:~/jomy$ cd git
+student@T20:~/jomy/git$ git clone https://github.com/Jomy-John/Test1.git
+Cloning into 'Test1'...
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 21 (delta 4), reused 13 (delta 1), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+student@T20:~/jomy/git$ git branch -d feature_x
+fatal: not a git repository (or any of the parent directories): .git
+student@T20:~/jomy/git$ git checkout master
+fatal: not a git repository (or any of the parent directories): .git
+student@T20:~/jomy/git$ git checkout feature_X
+fatal: not a git repository (or any of the parent directories): .git
+student@T20:~/jomy/git$ git commit
+fatal: not a git repository (or any of the parent directories): .git
+student@T20:~/jomy/git$ cd Test1
+student@T20:~/jomy/git/Test1$ git branch -d feature_x
+error: branch 'feature_x' not found.
+student@T20:~/jomy/git/Test1$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+student@T20:~/jomy/git/Test1$ git checkout feature_x
+Branch 'feature_x' set up to track remote branch 'feature_x' from 'origin'.
+Switched to a new branch 'feature_x'
+student@T20:~/jomy/git/Test1$ git branch -d feature_x
+error: Cannot delete branch 'feature_x' checked out at '/home/student/jomy/git/Test1'
+student@T20:~/jomy/git/Test1$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+student@T20:~/jomy/git/Test1$ git branch -d feature_x
+warning: deleting branch 'feature_x' that has been merged to
+         'refs/remotes/origin/feature_x', but not yet merged to HEAD.
+Deleted branch feature_x (was 31dbf88).
+student@T20:~/jomy/git/Test1$ git fetch origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Jomy-John/Test1.git/'
+student@T20:~/jomy/git/Test1$ git fetch origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Jomy-John/Test1
+ * branch            master     -> FETCH_HEAD
+   27f84e9..46e9922  master     -> origin/master
+student@T20:~/jomy/git/Test1$ git diff
+student@T20:~/jomy/git/Test1$ git merge origin master
+Updating 27f84e9..46e9922
+Fast-forward
+ sample.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T20:~/jomy/git/Test1$ git merge origin master
+Already up to date.
+student@T20:~/jomy/git/Test1$ git diff origin master
+student@T20:~/jomy/git/Test1$ git fetch origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Jomy-John/Test1.git/'
+student@T20:~/jomy/git/Test1$ git fetch origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Jomy-John/Test1
+ * branch            master     -> FETCH_HEAD
+   46e9922..3e2536d  master     -> origin/master
+student@T20:~/jomy/git/Test1$ git diff origin master
+diff --git a/README b/README
+index 3ccac3f..22c8e67 100644
+--- a/README
++++ b/README
+@@ -1,2 +1 @@
+ This is a readme file
+-This is a test repository
+student@T20:~/jomy/git/Test1$ git merge origin master
+Updating 46e9922..3e2536d
+Fast-forward
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+student@T20:~/jomy/git/Test1$ git revert origin master
+[master 589210f] Revert "Update README"
+ 1 file changed, 1 deletion(-)
+student@T20:~/jomy/git/Test1$ git merge origin master
+Already up to date.
+student@T20:~/jomy/git/Test1$ git branch feature_x
+student@T20:~/jomy/git/Test1$ git checkout feature_x
+Switched to branch 'feature_x'
+student@T20:~/jomy/git/Test1$ git rebase master
+Current branch feature_x is up to date.
+student@T20:~/jomy/git/Test1$ 
+

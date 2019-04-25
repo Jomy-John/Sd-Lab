@@ -1,0 +1,93 @@
+student@T20:~$ cd jomy
+student@T20:~/jomy$ gedit p1.sh
+student@T20:~/jomy$ chmod +x p1.sh
+student@T20:~/jomy$ ./p1.sh 1 2
+1 is less than 2
+student@T20:~/jomy$ ./p1.sh 1 1
+1 is equal to 1
+student@T20:~/jomy$ gedit p2.sh
+student@T20:~/jomy$ chmod +x p2.sh
+
+Enter a number
+2
+Number is even
+student@T20:~/jomy$ gedit p3.sh
+student@T20:~/jomy$ chmod +x p3.sh
+student@T20:~/jomy$ ./p3.sh
+enter a year
+2010
+Year is not leap year
+student@T20:~/jomy$ ./p3.sh
+enter a year
+2012
+ Year is a leap year
+student@T20:~/jomy$ gedit p3.sh
+student@T20:~/jomy$ ./p3.sh
+enter a year
+2004
+2004 is a leap year
+student@T20:~/jomy$ gedit p6.sh
+student@T20:~/jomy$ chmod +x p6.sh
+student@T20:~/jomy$ ./p6.sh
+enter a number
+2
+ 2 
+ 4 
+ 6 
+ 8 
+ 10 
+ 12 
+ 14 
+ 16 
+ 18 
+ 20 
+student@T20:~/jomy$ gedit p7.sh
+student@T20:~/jomy$ chmod +x p7.sh
+student@T20:~/jomy$ ./p7.sh
+enter a number
+8
+ 1 
+ 2 
+ 3 
+ 5 
+ 7 
+student@T20:~/jomy$ gedit p8.sh
+student@T20:~/jomy$ chmod +x p8.sh
+student@T20:~/jomy$ ./p8.sh
+enter n value
+10
+Sum of odd numbers = 25
+student@T20:~/jomy$ gedit p8.sh
+student@T20:~/jomy$ gedit p5.sh
+student@T20:~/jomy$ chmod +x p5.sh
+student@T20:~/jomy$ ./p5.sh
+enter limit
+10
+ 10 
+ 9 
+ 8 
+ 7 
+ 6 
+ 5 
+ 4 
+ 3 
+ 2 
+ 1 
+student@T20:~/jomy$ gedit p6.sh
+student@T20:~/jomy$ gedit p4.sh
+student@T20:~/jomy$ chmod +x p4.sh
+student@T20:~/jomy$ ./p4.sh
+enter a character
+a
+It is a vowel
+student@T20:~/jomy$ ./p4.sh
+enter a character
+b
+It is consonant
+student@T20:~/jomy$ ./p4.sh
+enter a character
+8
+ it is not an alphabet
+student@T20:~/jomy$ gedit p4.sh
+student@T20:~/jomy$ 
+

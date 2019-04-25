@@ -1,0 +1,161 @@
+student@U20:~$ cd jomy
+student@U20:~/jomy$ git init MyTest
+Initialized empty Git repository in /home/student/jomy/MyTest/.git/
+student@U20:~/jomy$ cd MyTest
+student@U20:~/jomy/MyTest$ gedit README
+student@U20:~/jomy/MyTest$ git config --global user.name "Jomy-John"
+student@U20:~/jomy/MyTest$ git config --global user.email "jomyjohn@mac.ajce.in" 
+student@U20:~/jomy/MyTest$ gedit sample.c
+student@U20:~/jomy/MyTest$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README
+	sample.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@U20:~/jomy/MyTest$ git add README
+student@U20:~/jomy/MyTest$ git add sample.c
+student@U20:~/jomy/MyTest$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README
+	new file:   sample.c
+
+student@U20:~/jomy/MyTest$ git commit -m "my first commit"
+[master (root-commit) 8f5f98e] my first commit
+ 2 files changed, 8 insertions(+)
+ create mode 100644 README
+ create mode 100644 sample.c
+student@U20:~/jomy/MyTest$ git commit
+On branch master
+nothing to commit, working tree clean
+student@U20:~/jomy/MyTest$ git remote add origin https://github.com/Jomy-John/MyTest.git
+student@U20:~/jomy/MyTest$ git push origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 6 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 348 bytes | 348.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Jomy-John/MyTest.git
+ * [new branch]      master -> master
+student@U20:~/jomy/MyTest$ git branch
+* master
+student@U20:~/jomy/MyTest$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   sample.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student@U20:~/jomy/MyTest$ add sample.c
+
+Command 'add' not found, did you mean:
+
+  command 'ldd' from deb libc-bin
+  command 'aid' from deb id-utils
+  command 'dad' from deb debian-dad
+  command 'adb' from deb adb
+  command 'pdd' from deb pdd
+  command 'axd' from deb afnix
+  command 'ad' from deb netatalk
+  command 'tdd' from deb devtodo
+  command 'amd' from deb am-utils
+  command 'ddd' from deb ddd
+  command 'adbd' from deb android-tools-adbd
+  command 'dd' from deb coreutils
+  command 'and' from deb and
+  command 'atd' from deb at
+
+Try: apt install <deb name>
+
+student@U20:~/jomy/MyTest$ git add sample.c
+student@U20:~/jomy/MyTest$ git commit -m "sample is edited"
+[master b9178b6] sample is edited
+ 1 file changed, 1 insertion(+)
+student@U20:~/jomy/MyTest$ git push origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Jomy-John/MyTest.git/'
+student@U20:~/jomy/MyTest$ git push origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Jomy-John/MyTest.git/'
+student@U20:~/jomy/MyTest$ git push origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 6 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Jomy-John/MyTest.git
+   8f5f98e..b9178b6  master -> master
+student@U20:~/jomy/MyTest$ git branch feature_x
+student@U20:~/jomy/MyTest$ git checkout feature_x
+Switched to branch 'feature_x'
+student@U20:~/jomy/MyTest$ gedit feature.c
+student@U20:~/jomy/MyTest$ git status
+On branch feature_x
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	feature.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@U20:~/jomy/MyTest$ git add feature.c
+student@U20:~/jomy/MyTest$ git commit -m "new feature"
+[feature_x c5507ec] new feature
+ 1 file changed, 5 insertions(+)
+ create mode 100644 feature.c
+student@U20:~/jomy/MyTest$ git push origin feature_x
+Username for 'https://github.com': jomy-John
+Password for 'https://jomy-John@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 6 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 369 bytes | 369.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'feature_x' on GitHub by visiting:
+remote:      https://github.com/Jomy-John/MyTest/pull/new/feature_x
+remote: 
+To https://github.com/Jomy-John/MyTest.git
+ * [new branch]      feature_x -> feature_x
+student@U20:~/jomy/MyTest$ git push origin feature_x
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+Everything up-to-date
+student@U20:~/jomy/MyTest$ git checkout master
+Switched to branch 'master'
+student@U20:~/jomy/MyTest$ git merge feature_y
+merge: feature_y - not something we can merge
+student@U20:~/jomy/MyTest$ git merge feature_x
+Updating b9178b6..c5507ec
+Fast-forward
+ feature.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 feature.c
+student@U20:~/jomy/MyTest$ git push origin master
+Username for 'https://github.com': Jomy-John
+Password for 'https://Jomy-John@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/Jomy-John/MyTest.git
+   b9178b6..c5507ec  master -> master
+student@U20:~/jomy/MyTest$ 
+

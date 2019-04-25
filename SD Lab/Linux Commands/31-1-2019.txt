@@ -1,0 +1,134 @@
+student@T21:~$ mkdir ajce
+student@T21:~$ cd ajce
+student@T21:~/ajce$ mkdir mca
+student@T21:~/ajce$ ls
+mca
+student@T21:~/ajce$ cd mca
+student@T21:~/ajce/mca$ mkdir rmca
+student@T21:~/ajce/mca$ mkdir lmca
+student@T21:~/ajce/mca$ mkdir intmca
+student@T21:~/ajce/mca$ ls
+intmca  lmca  rmca
+student@T21:~/ajce/mca$ cd rmca
+student@T21:~/ajce/mca/rmca$ cd ..
+student@T21:~/ajce/mca$ pwd
+/home/student/ajce/mca
+student@T21:~/ajce/mca$ cd /
+student@T21:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T21:/$ cd student
+bash: cd: student: No such file or directory
+student@T21:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T21:/$ cd~
+
+Command 'cd~' not found, did you mean:
+
+  command 'cdp' from deb irpas
+  command 'cdi' from deb cdo
+  command 'cdb' from deb tinycdb
+  command 'cd5' from deb cd5
+  command 'cdo' from deb cdo
+  command 'cdv' from deb codeville
+  command 'cde' from deb cde
+  command 'cdw' from deb cdw
+
+Try: apt install <deb name>
+
+student@T21:/$ cd ~
+student@T21:~$ cd ajce
+student@T21:~/ajce$ cd ..
+student@T21:~$ cd ajce
+student@T21:~/ajce$ cd mca
+student@T21:~/ajce/mca$ ls
+intmca  lmca  rmca
+student@T21:~/ajce/mca$ ls -l
+total 12
+drwxr-xr-x 2 student student 4096 Jan 31 14:36 intmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:36 lmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:36 rmca
+student@T21:~/ajce/mca$ man ls
+student@T21:~/ajce/mca$ ls -a
+.  ..  intmca  lmca  rmca
+student@T21:~/ajce/mca$ ls > out.txt
+student@T21:~/ajce/mca$ ls > out.txt
+student@T21:~/ajce/mca$ ls > h.txt
+student@T21:~/ajce/mca$ ls ..
+mca
+student@T21:~/ajce/mca$ ls /
+bin    etc             lib         mnt   run   stage2.img  var
+boot   home            lib64       opt   sbin  sys         vmlinuz
+cdrom  initrd.img      lost+found  proc  snap  tmp         vmlinuz.old
+dev    initrd.img.old  media       root  srv   usr
+student@T21:~/ajce/mca$ ls ~
+28-01-19      Desktop    examples.desktop  Public           sample     Videos
+28-01-19.txt  Documents  Music             PycharmProjects  snap
+ajce          Downloads  Pictures          ruby             Templates
+student@T21:~/ajce/mca$ man cd
+No manual entry for cd
+student@T21:~/ajce/mca$ ls /home/ajce/mca
+ls: cannot access '/home/ajce/mca': No such file or directory
+student@T21:~/ajce/mca$ cd ~
+student@T21:~$ pwd
+/home/student
+student@T21:~$ cd ajce
+.student@T21:~/ajce$ ls /home/student/ajce/mca
+h.txt  intmca  lmca  out.txt  rmca
+student@T21:~/ajce$ man cd
+No manual entry for cd
+student@T21:~/ajce$ man Cd
+No manual entry for Cd
+student@T21:~/ajce$ man CD
+No manual entry for CD
+student@T21:~/ajce$ man mkdir
+student@T21:~/ajce$ ls -t
+mca
+student@T21:~/ajce$ ls
+mca
+student@T21:~/ajce$ cd mca
+student@T21:~/ajce/mca$ ls
+h.txt  intmca  lmca  out.txt  rmca
+student@T21:~/ajce/mca$ ls -t
+h.txt  out.txt  intmca  lmca  rmca
+student@T21:~/ajce/mca$ ls -s
+total 20
+4 h.txt  4 intmca  4 lmca  4 out.txt  4 rmca
+student@T21:~/ajce/mca$ ls *
+h.txt  out.txt
+
+intmca:
+
+lmca:
+
+rmca:
+student@T21:~/ajce/mca$ cd rmca
+student@T21:~/ajce/mca/rmca$ mkdir jk
+student@T21:~/ajce/mca/rmca$ cd ..
+student@T21:~/ajce/mca$ ls *
+h.txt  out.txt
+
+intmca:
+
+lmca:
+
+rmca:
+jk
+student@T21:~/ajce/mca$ ls -r
+rmca  out.txt  lmca  intmca  h.txt
+student@T21:~/ajce/mca$ ls -d
+.
+student@T21:~/ajce/mca$ ls -d */
+intmca/  lmca/  rmca/
+student@T21:~/ajce/mca$ ls -d $pwd/*
+/bin    /etc             /lib         /mnt   /run   /stage2.img  /var
+/boot   /home            /lib64       /opt   /sbin  /sys         /vmlinuz
+/cdrom  /initrd.img      /lost+found  /proc  /snap  /tmp         /vmlinuz.old
+/dev    /initrd.img.old  /media       /root  /srv   /usr
+student@T21:~/ajce/mca$ man mkdir
+student@T21:~/ajce/mca$ man cd /
+man: cd-/: No such file or directory
+man: cd_/: No such file or directory
+No manual entry for cd
+man: /: Is a directory
+No manual entry for /
+

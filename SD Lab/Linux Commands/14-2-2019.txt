@@ -1,0 +1,40 @@
+student@T20:~$ cd ajce
+student@T20:~/ajce$ cd ~
+student@T20:~$ mkdir ex
+student@T20:~$ cd ajce
+student@T20:~/ajce$ cp f1.txt
+cp: missing destination file operand after 'f1.txt'
+Try 'cp --help' for more information.
+student@T20:~/ajce$ cp f1.txt home\example\sample
+student@T20:~/ajce$ cd ..
+student@T20:~$ cd example
+student@T20:~/example$ cd sample
+student@T20:~/example/sample$ ls
+student@T20:~/example/sample$ cd ..
+student@T20:~/ajce/rmca/example$ cd ..
+student@T20:~/ajce/rmca$ cd ..
+student@T20:~/ajce$ cd ..
+student@T20:~$ cd ajce
+student@T20:~/ajce$ cp f1.txt home/student/ajce/rmca/example
+cp: cannot create regular file 'home/student/ajce/rmca/example': No such file or directory
+student@T20:~/ajce$ cp f1.txt home/student/rmca
+cp: cannot create regular file 'home/student/rmca': No such file or directory
+student@T20:~/ajce$ cp f1.txt home/student/ajce/rmca
+cp: cannot create regular file 'home/student/ajce/rmca': No such file or directory
+student@T20:~/ajce$ cp f1.txt /home/student/rmca
+student@T20:~/ajce$ cp -r lmca /home/student/ajce/intmca
+student@T20:~/ajce$ ls
+11-2-2019.txt  f1.txt  f3.txt             intmca  rmca
+a.txt          f2.txt  homeexamplesample  lmca
+student@T20:~/ajce$ rm f1.txt
+student@T20:~/ajce$ ls
+11-2-2019.txt  a.txt  f2.txt  f3.txt  homeexamplesample  intmca  lmca  rmca
+student@T20:~/ajce$ cd rmca
+student@T20:~/ajce/rmca$ ls
+example  f2.txt~
+student@T20:~/ajce/rmca$ rm -r example
+student@T20:~/ajce/rmca$ ls
+f2.txt~
+student@T20:~/ajce/rmca$ man rm
+student@T20:~/ajce/rmca$ 
+

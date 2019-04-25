@@ -1,0 +1,136 @@
+student@T20:~$ cd ajce
+student@T20:~/ajce$ cat > f1.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+thats the problem every one dies in the end
+^C
+student@T20:~/ajce$ wc f1.txt
+11 19 65 f1.txt
+student@T20:~/ajce$ wc -l f1.txt
+11 f1.txt
+student@T20:~/ajce$ wc -c f1.txt
+65 f1.txt
+student@T20:~/ajce$ wc -m f1.txt
+65 f1.txt
+student@T20:~/ajce$ wc -L f1.txt
+43 f1.txt
+student@T20:~/ajce$ wc -w f1.txt
+19 f1.txt
+student@T20:~/ajce$ wc a.txt
+ 16  15 148 a.txt
+student@T20:~/ajce$ wc -L a.txt
+12 a.txt
+student@T20:~/ajce$ wc -c a.txt
+148 a.txt
+student@T20:~/ajce$ wc -m a.txt
+148 a.txt
+student@T20:~/ajce$ cut -c2 a.txt
+o
+h
+x
+f
+s
+a
+a
+k
+v
+n
+n
+s
+f
+s
+r
+
+student@T20:~/ajce$ cut -c4 a.txt
+o
+f
+z
+h
+k
+j
+k
+n
+k
+k
+;
+b
+k
+s
+j
+
+student@T20:~/ajce$ cut -c2,3,4 a.txt
+ooo
+hjf
+xsz
+fsh
+sak
+afj
+afk
+ksn
+vnk
+nfk
+nv;
+svb
+fck
+sbs
+rwj
+
+student@T20:~/ajce$ man cut
+student@T20:~/ajce$ touch b.txt
+student@T20:~/ajce$ cut -f3 b.txt
+qyfdhewgu
+
+
+
+
+wuhi
+
+
+student@T20:~/ajce$ cut -b2 b.txt
+y
+j
+s
+u
+j
+j
+a
+h
+student@T20:~/ajce$ man cut
+student@T20:~/ajce$ cut -f3 b.txt
+jhdgskjdf
+kjdfgkd
+kjdek;l
+kdekj
+student@T20:~/ajce$ cut -f1 b.txt
+esjks
+ahsj
+hdhjd
+havh
+student@T20:~/ajce$ cut -21 b.txt
+cut: invalid option -- '2'
+Try 'cut --help' for more information.
+student@T20:~/ajce$ cut -f2 b.txt
+hjdsj
+dfskj
+kjdjdf
+jrkj
+student@T20:~/ajce$ cut -f1,2 b.txt
+esjks	hjdsj
+ahsj	dfskj
+hdhjd	kjdjdf
+havh	jrkj
+student@T20:~/ajce$ cut -b2 b.txt
+s
+h
+d
+a
+student@T20:~/ajce$ 
+
